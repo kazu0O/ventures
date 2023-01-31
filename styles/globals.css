@@ -101,12 +101,48 @@ a {
 }
 
 h2 {
- 
 }
-
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+#nav-container {
+  width: 55%;
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5%;
+}
+
+@media screen and (max-device-width: 850px) {
+  #nav-container {
+    width: 85%;
+    font-size: 0.8em;
+  }
+
+  .Home_center__4BFgC::before,
+  .Home_center__4BFgC::after {
+    left: 75% !important;
+    top: 30%;
+  }
+}
+
+@media screen and (max-device-width: 800px) {
+  #nav-container {
+    font-size: 0.5em;
+    width: 100%;
+  }
+
+  #nav-container a {
+    padding: 0;
+  }
+
+  .Home_center__4BFgC::before,
+  .Home_center__4BFgC::after {
+    left: 100% !important;
+    top: 35%;
   }
 }
