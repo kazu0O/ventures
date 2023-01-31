@@ -3,25 +3,25 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 1.5rem;
   min-height: 100vh;
 }
 
 .description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
+  
+  display: flex;
+  justify-content: space-between;
   font-size: 0.85rem;
-  max-width: var(--max-width);
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
 }
 
+
+
+
 .description a {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 0.5rem;
 }
 
@@ -40,18 +40,91 @@
 }
 
 .grid {
-  display: grid;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-template-columns: repeat(4, minmax(25%, auto));
-  width: var(--max-width);
   max-width: 100%;
+  width: 50rem;
+  background: linear-gradient(to right, #ffd90000, rgba(138, 149, 152, 0.336),#e9a2a812, #807b8918, #6c5f680c, #ffff0001);
+  height: 2rem;
+
+  /* Add a box shadow to create a 3D effect */
+
+
+  /* Add a border */
+
+  /* Add a border-radius to create a curved edge */
 }
 
+.grid h2 {
+  margin-left: 4.5rem;
+}
+
+.form {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin-bottom: 7.5rem;
+  
+}
+
+.button {
+  background-color: #1a1a1a;
+
+  /* Add a border */
+
+  
+  /* Add a border-radius to create a rounded edge */
+  border-radius: 8px;
+  border: none;
+  /* Add some padding to center the text inside the button */
+  padding: 8px;
+  
+  /* Add some text styling */
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  box-shadow: 0px 0px 2.5px rgba(218, 165, 32, 0.317), 0px 0px 5px #ffbb0009, 0px 0px 7.5px #00ffe120;
+
+}
+
+.button:hover {
+  box-shadow: 0px 0px 2.5px rgba(218, 165, 32, 0.653), 0px 0px 5px #ffbb005a, 0px 0px 7.5px #00ffe14c;
+}
+
+.grid a:hover {
+  transform: scale(1.1);
+}
+
+
+.grid a {
+ width: 20rem;
+ transition: transform 0.25s;
+}
+
+
+
+.nav:hover {
+  transition: transform(1s);
+}
+
+
 .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 1rem 1.2rem;
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
+  background: rgba(var(--card-rgb), 0.1);
+  border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  
 }
 
 .card span {
@@ -61,7 +134,6 @@
 
 .card h2 {
   font-weight: 600;
-  margin-bottom: 0.7rem;
 }
 
 .card p {
@@ -75,7 +147,7 @@
 .center {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   padding: 4rem 0;
 }
@@ -104,9 +176,13 @@
   transform: translateZ(0);
 }
 
-.logo,
-.thirteen {
-  position: relative;
+.logo {
+  /* filter: hue-rotate(100deg); */
+
+}
+
+.yggLogo {
+  /* filter: hue-rotate(400deg) invert(0.1); */
 }
 
 .thirteen {
@@ -120,7 +196,26 @@
   transform: translateZ(0);
   border-radius: var(--border-radius);
   overflow: hidden;
-  box-shadow: 0px 2px 8px -1px #0000001a;
+  
+}
+
+
+.footer {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 0.8rem;
+  width: 100%;
+  z-index: 2;
+  font-family: var(--font-mono);
+
+}
+
+#comingSoon {
+  margin: 1rem 0rem;
 }
 
 .thirteen::before,
@@ -151,26 +246,17 @@
   background-clip: content-box;
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
 
-  .card:hover span {
-    transform: translateX(4px);
-  }
-}
+
+/* Enable hover only on non-touch devices */
+
 
 @media (prefers-reduced-motion) {
   .thirteen::before {
     animation: none;
   }
 
-  .card:hover span {
-    transform: none;
-  }
+
 }
 
 /* Mobile */
@@ -179,13 +265,7 @@
     padding: 4rem;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
-  }
-
+ 
   .card {
     padding: 1rem 2.5rem;
   }
@@ -252,9 +332,7 @@
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -264,7 +342,8 @@
 
   .logo,
   .thirteen img {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+    /* filter: invert(.8); */
+    
   }
 }
 
@@ -275,4 +354,162 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+@media (max-width: 600px) {
+  /* CSS styles for screens smaller than 600px */
+  .yggLogo {
+    width: 50px; /* adjust the width of the logo for smaller screens */
+  }
+
+
+  .logo {
+    width: 25rem;
+    height: 15rem;
+    padding: 1rem;
+  }
+
+  .grid {
+    width: 5% !important;
+    font-size: 0.75rem;
+    margin-left: 14.5rem;
+  }
+  
+  .card {
+    width: 100%; /* adjust the width of the card for smaller screens */
+    height: 25rem;
+  }
+
+  #comingSoon {
+    margin-bottom: 10rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  /* CSS styles for screens between 600px and 900px */
+  .yggLogo {
+    width: 60px; /* adjust the width of the logo for tablets */
+    height: 80px;
+    margin-right: 1rem;
+  }
+ 
+  .card {
+    width: 90%; /* adjust the width of the card for tablets */
+  }
+  
+}
+
+/* iPhone 10 */
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+  .yggLogo {
+      width: 60px;
+      height: 75px;
+  }
+
+  .logo {
+    width: 27rem;
+    height: 17rem;
+    padding: 2rem;
+  }
+  .grid {
+    width: 5% !important;
+    font-size: 0.75rem;
+    margin-left: 14.5rem;
+  }
+}
+
+/* iPhone 11 */
+@media only screen and (min-device-width: 375px) and (max-device-width: 414px) {
+  .yggLogo {
+      width: 70px;
+      height: 88px;
+  }
+  
+  .grid {
+    width: 5% !important;
+    font-size: 0.75rem;
+    margin-left: 14.5rem;
+  }
+
+}
+
+/* iPhone 12 */
+@media only screen and (min-device-width: 414px) and (max-device-width: 896px) {
+  .yggLogo {
+      width: 80px;
+      height: 100px;
+  }
+
+  .logo {
+    margin-top: 5rem;
+    width: 30rem;
+    height: 17rem;
+    padding: 2rem;
+  }
+
+  #comingSoon {
+    margin-bottom: 18rem;
+  }
+  
+  .card {
+    width: 100%;
+    margin-bottom: 12rem;
+  }
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 420px) {
+  .yggLogo {
+      width: 80px;
+      height: 100px;
+  }
+
+  .logo {
+    margin-top: 5rem;
+    width: 25rem;
+    height: 15rem;
+    padding: 2rem;
+  }
+
+  #comingSoon {
+    margin-bottom: 15rem;
+  }
+  
+  .card {
+    width: 100%;
+    margin-bottom: 12rem;
+  }
+}
+
+@media only screen and (min-device-width: 200px) and (max-device-width: 350px) {
+  .yggLogo {
+      width: 80px;
+      height: 100px;
+  }
+
+  .logo {
+    margin-top: 8.5rem;
+    width: 23rem;
+    height: 15rem;
+    padding: 2rem;
+  }
+
+  #comingSoon {
+    margin-bottom: 17rem;
+    font-size: small;
+  }
+  
+  .card {
+    width: 100%;
+    margin-bottom: 12rem;
+  }
+}
+
+/* iPhone 13 */
+@media only screen and (min-device-width: 896px) {
+  .yggLogo {
+      width: 90px;
+      height: 113px;
+  }
+
+
 }

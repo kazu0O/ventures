@@ -23,22 +23,24 @@ export default function Home() {
           <Link href="/">
            
               {' '}
-              {/* <Image
+              <Image
                 className={styles.yggLogo}
                 src="/yggShield.png"
                 alt="YGG Ventures Logo"
-                width={50}
-                height={80}
+                width={80}
+                height={100}
                 priority
-              /> */}
+              />
             
           </Link> 
           {/* start nav menu */}
            <div className={styles.grid}>
           <Link
-            href="/"
+            href="/pages/about"
+            id={styles.link1}
             target="_blank"
             rel="noopener noreferrer"
+            type="disabled"
           >
             <h2 className={inter.className}>
               About -&gt;
@@ -48,7 +50,7 @@ export default function Home() {
 
           <Link
             href="/pages/portfolio"
-            className={styles.nav}
+            
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -59,7 +61,7 @@ export default function Home() {
 
           <Link
             href="/pages/contact"
-            className={styles.nav}
+            
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -88,7 +90,7 @@ export default function Home() {
         
         
         </div>
-          
+          <div className={styles.card}>
         <div className={styles.center}>
           <Image
             className={styles.logo}
@@ -102,7 +104,6 @@ export default function Home() {
           
 
         </div>
-        <h4 className={inter.className} id={styles.comingSoon}></h4>
         {/* <form className={styles.form}>
             <h2 className={inter.className}>Subscribe for updates</h2>
             <br />
@@ -110,7 +111,7 @@ export default function Home() {
             <br />
             <button type="submit" className={styles.button}>Subscribe</button>
           </form> */}
-        
+        </div>
 
         <div className={styles.footer}>
           
