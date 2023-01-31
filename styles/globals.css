@@ -115,6 +115,16 @@ h2 {
   display: flex;
   justify-content: space-between;
   margin-right: 5%;
+  background: linear-gradient(
+    to right,
+    #ffd90000,
+    rgba(138, 149, 152, 0.336),
+    #e9a2a812,
+    #807b8918,
+    #6c5f680c,
+    #ffff0001
+  );
+  padding: 8px;
 }
 
 @media screen and (max-device-width: 850px) {
