@@ -85,7 +85,10 @@ export default function Home() {
             priority
           />
         </div>
-        <h4 className={inter.className} id={styles.comingSoon}></h4>
+        <div className={styles.footer}>
+          <code>© 2023. All rights reserved.</code>
+        </div>
+        
         {/* <form className={styles.form}>
             <h2 className={inter.className}>Subscribe for updates</h2>
             <br />
@@ -94,9 +97,7 @@ export default function Home() {
             <button type="submit" className={styles.button}>Subscribe</button>
           </form> */}
 
-        <div className={styles.footer}>
-          <code>© 2023. All rights reserved.</code>
-        </div>
+        
       </main>
     </>
   );
