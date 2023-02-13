@@ -20,20 +20,18 @@ export default function Home() {
       <main className={styles.main}>
         {/* start nav menu */}
 
-        <div id='nav-container'>
+        <div className={styles.description} id='nav-container'>
           {/* start nav menu */}
-          <Link href='/'>
-            {' '}
-            <Image
-              className={styles.yggLogo}
-              src='/yggShield.png'
-              alt='YGG Ventures Logo'
-              width={80}
-              height={100}
-              priority
-            />
+          <Link
+            href='/about'
+            className={inter.className}
+            rel='noopener noreferrer'
+          >
+            <h2 id='nav-about' className={inter.className}>
+              About -&gt;
+            </h2>
           </Link>
-
+          
           <Link
             href='/portfolio'
             className={styles.nav}
