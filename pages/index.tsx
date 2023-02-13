@@ -29,16 +29,15 @@ export default function Home() {
               /> */}
           </Link>
           {/* start nav menu */}
-          <Link href='/' target='_blank' rel='noopener noreferrer'>
+          <Link href='/about' rel='noopener noreferrer'>
             <h2 id='nav-about' className={inter.className}>
               About -&gt;
             </h2>
           </Link>
 
           <Link
-            href='/pages/portfolio'
+            href='/portfolio'
             className={styles.nav}
-            target='_blank'
             rel='noopener noreferrer'
           >
             <h2 id='portfolio-about' className={inter.className}>
@@ -49,7 +48,6 @@ export default function Home() {
           <Link
             href='/pages/contact'
             className={styles.nav}
-            target='_blank'
             rel='noopener noreferrer'
           >
             <h2 id='contact-about' className={inter.className}>
@@ -60,7 +58,6 @@ export default function Home() {
           <Link
             href='https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
             className={styles.nav}
-            target='_blank'
             rel='noopener noreferrer'
           >
             <h2 className={inter.className}>
