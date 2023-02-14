@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
+
 import { NavBar } from '../components/navbar';
 
-export default function Home() {
+export default function Contact() {
   return (
     <>
       <Head>
@@ -14,27 +15,29 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <NavBar />
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src='/yggventures2.png'
-            alt='ygg ventures'
-            width={700}
-            height={350}
-            priority
-          />
-        </div>
-        <div className={styles.footer}>
-          <code>© 2023. All rights reserved.</code>
-        </div>
-
-        {/* <form className={styles.form}>
+        <div className={styles.card}>
+          <div className={styles.center}>
+            <Image
+              className={styles.logo}
+              src='/yggventures2.png'
+              alt='ygg ventures'
+              width={700}
+              height={350}
+              priority
+            />
+          </div>
+          {/* <form className={styles.form}>
             <h2 className={inter.className}>Subscribe for updates</h2>
             <br />
             <input type="email" placeholder="Enter your email address" className={styles.input} />
             <br />
             <button type="submit" className={styles.button}>Subscribe</button>
           </form> */}
+        </div>
+
+        <div className={styles.footer}>
+          <code>© 2023. All rights reserved.</code>
+        </div>
       </main>
     </>
   );
