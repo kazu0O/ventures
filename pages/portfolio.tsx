@@ -3,12 +3,12 @@ import Image from 'next/image';
 import { Inter } from '@next/font/google';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
-
+import { NavBar } from '../components/navbar';
 import { GameCard } from '../components/gamecard';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
+export default function Portfolio() {
   return (
     <>
       <Head>
@@ -18,56 +18,7 @@ export default function Home() {
         <link rel='icon' href='/yggShield.png' />
       </Head>
       <main className={styles.main}>
-        {/* start nav menu */}
-
-        <div className={styles.description} id='nav-container'>
-          {/* start nav menu */}
-          <Link
-            href='/about'
-            className={inter.className}
-            rel='noopener noreferrer'
-          >
-            <h2 id='nav-about' className={inter.className}>
-              About -&gt;
-            </h2>
-          </Link>
-          
-          <Link
-            href='/portfolio'
-            className={styles.nav}
-            rel='noopener noreferrer'
-          >
-            <h2 id='portfolio-about' className={inter.className}>
-              Portfolio -&gt;
-            </h2>
-          </Link>
-
-          <Link
-            href='/pages/contact'
-            className={styles.nav}
-            rel='noopener noreferrer'
-          >
-            <h2 id='contact-about' className={inter.className}>
-              Contact -&gt;
-            </h2>
-          </Link>
-
-          <Link
-            href='https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-            className={styles.nav}
-            rel='noopener noreferrer'
-          >
-            <h2 className={inter.className}>
-              <span id='blog-about' className={styles.textGradient}>
-                Blog -&gt;
-              </span>
-            </h2>
-            {/* <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p> */}
-          </Link>
-        </div>
+        <NavBar />
         <div className='portfolio-container'>
           <GameCard />
         </div>

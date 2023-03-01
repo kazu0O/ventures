@@ -43,7 +43,15 @@
   grid-template-columns: repeat(4, minmax(25%, auto));
   max-width: 100%;
   width: 50rem;
-  background: linear-gradient(to right, #fbfbfb00, rgb(214, 214, 214),#a2dce912, #807b8918, #5f6b6c0c, #ffff0001);
+  background: linear-gradient(
+    to right,
+    #fbfbfb00,
+    rgb(214, 214, 214),
+    #a2dce912,
+    #807b8918,
+    #5f6b6c0c,
+    #ffff0001
+  );
   height: 2rem;
 
   /* Add a box shadow to create a 3D effect */
@@ -85,7 +93,8 @@
 }
 
 .button:hover {
-  box-shadow: 0px 0px 2.5px rgba(224, 224, 224, 0.317), 0px 0px 5px #ffbb0009, 0px 0px 7.5px #00ffe120;
+  box-shadow: 0px 0px 2.5px rgba(224, 224, 224, 0.317), 0px 0px 5px #ffbb0009,
+    0px 0px 7.5px #00ffe120;
 }
 
 .grid a:hover {
