@@ -15,7 +15,7 @@ export default function About() {
       </Head>
       <main className={styles.main}>
         <NavBar />
-        <div className={styles.card}>
+        
           <div className={styles.center}>
             <Image
               className={styles.logo}
@@ -33,7 +33,7 @@ export default function About() {
             <br />
             <button type="submit" className={styles.button}>Subscribe</button>
           </form> */}
-        </div>
+        
 
         <div className={styles.footer}>
           <code>© 2023. All rights reserved.</code>

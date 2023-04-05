@@ -116,7 +116,7 @@ export const GameCard = () => {
             >
               <Image
                 src={game.logo}
-                alt={game.alt}
+                alt={game.alt || ''}
                 layout='fill'
                 objectFit='contain'
               />
