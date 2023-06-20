@@ -1,70 +1,20 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16aaff 0deg,
-    #1cff08fc 55deg,
-    #54d7ff 120deg,
-    #0073ff 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
 
-    --primary-glow: radial-gradient(rgb(255, 255, 255));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(255, 255, 255, 0.432),
-      rgba(245, 245, 240, 0),
-      rgba(248, 248, 248, 0.199)
-    );
+
 
     --tile-start-rgb: 2, 13, 46;
     --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
+    --tile-border: conic-gradient(#ffffff80,
+        #ffffff40,
+        #ffffff30,
+        #ffffff20,
+        #ffffff10,
+        #ffffff10,
+        #ffffff80);
 
     --callout-rgb: 20, 20, 20;
     --callout-border-rgb: 108, 108, 108;
@@ -85,14 +35,13 @@ body {
 }
 
 body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   overflow-x: hidden;
+
 }
 
 a {
@@ -100,8 +49,7 @@ a {
   text-decoration: none;
 }
 
-h2 {
-}
+h2 {}
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
@@ -110,8 +58,10 @@ body::-webkit-scrollbar {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /* GAMES */
@@ -171,45 +121,18 @@ body {
   padding: 20px;
 }
 
+
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
 }
 
-#nav-container {
-  width: 100%;
-  align-self: flex-end;
-  display: flex;
-  justify-content: space-between;
-  padding: 8px;
-  align-items: center;
-}
 
-#nav-links-container {
-  background: linear-gradient(
-    to right,
-    #ffffff00,
-    rgba(255, 255, 255, 0.142),
-    rgba(149, 149, 149, 0.071),
-    rgba(196, 196, 196, 0.094),
-    #8787870c,
-    #90909001
-  );
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 @media screen and (max-device-width: 850px) {
-  #nav-container {
-    font-size: 0.8em;
-  }
 
-  #nav-links-container {
-    width: 80%;
-  }
 
   .Home_center__4BFgC::before,
   .Home_center__4BFgC::after {
@@ -232,26 +155,10 @@ body {
 }
 
 @media screen and (max-device-width: 800px) {
-  #nav-container {
-    font-size: 0.5em;
-  }
 
-  #nav-container a {
-    padding: 0;
-  }
-  #nav-links-container {
-    width: 85%;
-  }
 
-  #nav-logo-container {
-    width: 12%;
-    height: 5vh;
-  }
 
-  #ygg-logo {
-    width: auto;
-    height: 100%;
-  }
+
 
   .card {
     width: 70vw;

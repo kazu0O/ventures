@@ -1,4 +1,5 @@
 .main {
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -109,35 +110,47 @@
 }
 
 .card {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  color: white;
   flex-direction: column;
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
-  background: rgba(var(--card-rgb), 0.1);
-  border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  justify-content: center;
+  margin-bottom: 3%;
+  min-height: 20vh;
+  padding: 3%;
+  /* adjust the padding as needed */
+  width: 24vw;
+  border: 0.5px solid rgba(207, 250, 255, 0.265);
+  text-align: justify;
+
+  /* justifies the text, giving it a more even appearance */
+}
+
+.card h1 {
+  animation: glow 12s ease-in-out infinite;
+}
+
+.card p {
+  animation: glow 12s ease-in-out infinite;
+  margin-top: 1rem;
+  opacity: 0.6;
+  /* adjust as needed */
 }
 
 .card span {
+  animation: glow 12s ease-in-out infinite;
   display: inline-block;
   transition: transform 200ms;
 }
 
 .card h2 {
+  animation: glow 12s ease-in-out infinite;
   font-weight: 600;
 }
 
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-}
+
 
 .center {
   display: flex;
@@ -171,11 +184,31 @@
 }
 
 .logo {
-  /* filter: hue-rotate(100deg); */
+  animation: glow 12s ease-in-out infinite;
 }
 
+@keyframes glow {
+
+  0%,
+  100% {
+    filter:
+      drop-shadow(0 0 10px rgba(192, 192, 192, 0.25)) drop-shadow(0 0 15px rgba(250, 250, 210, 0.25)) drop-shadow(0 0 20px rgba(0, 255, 255, 0.25));
+  }
+
+  50% {
+    filter:
+      drop-shadow(0 0 20px rgba(192, 192, 192, 0.25)) drop-shadow(0 0 30px rgba(224, 224, 223, 0.479)) drop-shadow(0 0 40px rgba(0, 255, 255, 0.25));
+  }
+}
+
+
+
+
+
 .yggLogo {
-  /* filter: hue-rotate(400deg) invert(0.1); */
+  margin-top: 1.5rem;
+  width: 20rem;
+
 }
 
 .thirteen {
@@ -313,6 +346,20 @@
   }
 }
 
+.responsiveImage {
+  width: 20%;
+  max-width: 270px;
+  /* This would be the max width of your image */
+}
+
+
+@media (max-width: 600px) {}
+
+@media (min-width: 600px) and (max-width: 900px) {}
+
+/* continue with other media queries... */
+
+
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {}
 
@@ -345,10 +392,8 @@
     /* adjust the width of the logo for smaller screens */
   }
 
-  .logo {
-    width: 25rem;
-    height: 15rem;
-    padding: 1rem;
+  .responsiveImage {
+    max-width: 100%;
   }
 
   .grid {
@@ -378,6 +423,11 @@
     margin-right: 1rem;
   }
 
+  .responsiveImage {
+    max-width: 50%;
+    /* adjust the value as needed */
+  }
+
   .card {
     width: 90%;
     /* adjust the width of the card for tablets */
@@ -391,11 +441,6 @@
     height: 75px;
   }
 
-  .logo {
-    width: 27rem;
-    height: 17rem;
-    padding: 2rem;
-  }
 
   .grid {
     width: 5% !important;
@@ -406,9 +451,9 @@
 
 /* iPhone 11 */
 @media only screen and (min-device-width: 375px) and (max-device-width: 414px) {
-  .yggLogo {
-    width: 70px;
-    height: 88px;
+  .responsiveImage {
+    max-width: 50%;
+
   }
 
   .grid {
@@ -425,12 +470,11 @@
     height: 100px;
   }
 
-  .logo {
-    margin-top: 5rem;
-    width: 30rem;
-    height: 17rem;
-    padding: 2rem;
+  .responsiveImage {
+    max-width: 50%;
+
   }
+
 
   #comingSoon {
     margin-bottom: 18rem;
@@ -448,12 +492,11 @@
     height: 100px;
   }
 
-  .logo {
-    margin-top: 3rem;
-    width: 25rem;
-    height: 15rem;
-    padding: 2rem;
+  .responsiveImage {
+    max-width: 50%;
+
   }
+
 
   #comingSoon {
     margin-bottom: 15rem;
@@ -471,12 +514,11 @@
     height: 100px;
   }
 
-  .logo {
-    margin-top: 8.5rem;
-    width: 23rem;
-    height: 15rem;
-    padding: 2rem;
+  .responsiveImage {
+    max-width: 50%;
+
   }
+
 
   #comingSoon {
     margin-bottom: 17rem;
@@ -495,4 +537,10 @@
     width: 90px;
     height: 113px;
   }
+
+  .responsiveImage {
+    max-width: 50%;
+
+  }
+
 }

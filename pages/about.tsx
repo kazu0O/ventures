@@ -17,17 +17,25 @@ export default function About() {
         <NavBar />
         
           <div className={styles.center}>
-            <Image
-              className={styles.logo}
-              src='/yggventures2.png'
-              alt='ygg ventures'
-              width={700}
-              height={350}
-              priority
-            />
+          <div className={`${styles.card}`}>
+            <h1 style={{marginBottom: "15px"}}> Yield Guild Games (YGG)</h1>
+            <br />
+  <h3 style={{textAlign: 'center'}}>
+   A top web3 gaming guild, is entering the venture capital space, raising $75 million for its first fund.
+  </h3>
+
+  <p>
+    "The fund's mandate is to invest in early-stage token and equity deals in web3, gaming studios and the infrastructure that supports the growth of the industry to benefit the LPs [limited partners] of YGG Ventures Fund I," reads the fund's pitch deck, which was obtained by The Block. YGG co-founder Beryl Li confirmed the formation of YGG Ventures and the fund's targeted amount.
+  </p>
+
+  <p>
+    "We are just about to begin raising from LPs for the fund," Li said. She is now also a director of YGG Ventures, according to the pitch deck. Li will be part of the fund's investment committee as well, along with Gabby Dizon, another co-founder of YGG, and Jeff Holmberg, head of asset acquisition at YGG, who will transition to partner at YGG Ventures. Holmberg will oversee the fund's strategy and day-to-day operations in his new role and manage a team of gaming analysts, according to the deck.
+  </p>
+</div>
+
           </div>
           {/* <form className={styles.form}>
-            <h2 className={inter.className}>Subscribe for updates</h2>
+            <h2 className={inter.classN ame}>Subscribe for updates</h2>
             <br />
             <input type="email" placeholder="Enter your email address" className={styles.input} />
             <br />

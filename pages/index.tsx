@@ -15,15 +15,18 @@ export default function Home() {
       <main className={styles.main}>
         <NavBar />
         <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src='/yggventures2.png'
-            alt='ygg ventures'
-            width={700}
-            height={350}
-            priority
-          />
-        </div>
+  <div className={styles.responsiveImage}>
+    <Image
+      className={`${styles.logo}`}
+      src='/yggShield.png'
+      alt='ygg ventures'
+      layout="responsive"
+      width={270}
+      height={330}
+    />
+  </div>
+</div>
+
         <div className={styles.footer}>
           <code>© 2023. All rights reserved.</code>
         </div>

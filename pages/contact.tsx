@@ -16,15 +16,13 @@ export default function Contact() {
       <main className={styles.main}>
         <NavBar />
         <div className={styles.card}>
-          <div className={styles.center}>
-            <Image
-              className={styles.logo}
-              src='/yggventures2.png'
-              alt='ygg ventures'
-              width={700}
-              height={350}
-              priority
-            />
+          <div className={styles.center} style={{flexDirection: 'column'}}>
+            <p>beryl@yieldguild.games</p>
+           
+            <p>jeff@yieldguild.games</p>
+            
+            <p>gabby@yieldguild.games</p>
+            
           </div>
           {/* <form className={styles.form}>
             <h2 className={inter.className}>Subscribe for updates</h2>
