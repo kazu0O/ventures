@@ -28,6 +28,7 @@ export default function Home() {
 </div>
 
         <div className={styles.footer}>
+       
           <code>© 2023. All rights reserved.</code>
         </div>
 

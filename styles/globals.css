@@ -103,6 +103,8 @@ body {
   padding: 3%;
   width: 24vw;
   border: 1px solid rgba(255, 191, 0, 0.265);
+  overflow: auto;
+  word-wrap: break-word;
 }
 
 .card img {

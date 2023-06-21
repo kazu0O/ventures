@@ -110,6 +110,7 @@
 }
 
 .card {
+  max-width: 90%;
   align-items: center;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -121,11 +122,18 @@
   min-height: 20vh;
   padding: 3%;
   /* adjust the padding as needed */
-  width: 24vw;
   border: 0.5px solid rgba(207, 250, 255, 0.265);
   text-align: justify;
-
+  overflow: auto;
+  word-wrap: break-word;
+  height: auto;
   /* justifies the text, giving it a more even appearance */
+}
+
+.cardContainer {
+
+  display: flex;
+  justify-content: center;
 }
 
 .card h1 {
@@ -205,11 +213,15 @@
 
 
 
-.yggLogo {
-  margin-top: 1.5rem;
-  width: 20rem;
 
+
+@media only screen and (max-width: 600px) {
+  .yggLogo {
+    width: 50%;
+  }
 }
+
+
 
 .thirteen {
   display: flex;
@@ -353,7 +365,11 @@
 }
 
 
-@media (max-width: 600px) {}
+@media (max-width: 600px) {
+  .responsiveImage {
+    max-width: 100%;
+  }
+}
 
 @media (min-width: 600px) and (max-width: 900px) {}
 
@@ -388,9 +404,10 @@
 
   /* CSS styles for screens smaller than 600px */
   .yggLogo {
-    width: 50px;
+    width: 100%;
     /* adjust the width of the logo for smaller screens */
   }
+
 
   .responsiveImage {
     max-width: 100%;
@@ -417,7 +434,7 @@
 
   /* CSS styles for screens between 600px and 900px */
   .yggLogo {
-    width: 60px;
+    width: 100%;
     /* adjust the width of the logo for tablets */
     height: 80px;
     margin-right: 1rem;
@@ -436,10 +453,8 @@
 
 /* iPhone 10 */
 @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
-  .yggLogo {
-    width: 60px;
-    height: 75px;
-  }
+
+
 
 
   .grid {
@@ -466,7 +481,7 @@
 /* iPhone 12 */
 @media only screen and (min-device-width: 414px) and (max-device-width: 896px) {
   .yggLogo {
-    width: 80px;
+    width: 100%;
     height: 100px;
   }
 
@@ -487,9 +502,9 @@
 }
 
 @media only screen and (min-device-width: 300px) and (max-device-width: 420px) {
+
   .yggLogo {
-    width: 80px;
-    height: 100px;
+    width: 20px;
   }
 
   .responsiveImage {

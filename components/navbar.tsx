@@ -11,17 +11,14 @@ export const NavBar = () => {
       <div id='nav-logo-container'>
         <Link href='/'>
           {' '}
-          <Image
-            
-            id='ygg-logo'
-            src='/ygg.png'
-            alt='YGG Ventures Logo'
-            width={288/2}
-            height={106/2}
-            
-          
-          
-          />
+          <Image 
+  id='ygg-logo'
+  src='/ygg.png'
+  alt='YGG Ventures Logo'
+  width={144/2}
+  height={53/2}
+></Image>
+
         </Link>
       </div>
       <div id='nav-links-container'>
@@ -45,7 +42,7 @@ export const NavBar = () => {
         </Link>
 
         <Link
-          href='https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
+          href='/blog'
           rel='noopener noreferrer'
         >
           <h2 className={inter.className}>
@@ -62,19 +59,21 @@ export const NavBar = () => {
 
   #nav-links-container {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     justify-content: flex-end;
     flex-grow: 1;
   }
 
-  #nav-links-container h2 {
+  h2 {
     position: relative;
     margin: 0;
     padding: 0;
     transition: color 0.3s ease-in-out;
+    font-size: 1.3rem;
+    margin-top: 1rem;
   }
 
-  #nav-links-container h2::after {
+  h2::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -85,7 +84,7 @@ export const NavBar = () => {
     transition: width 0.3s ease-in-out;
   }
 
-  #nav-links-container h2:hover::after {
+  h2:hover::after {
     width: 100%;
   }
 
@@ -101,10 +100,13 @@ export const NavBar = () => {
     }
 
     #ygg-logo {
-      margin-bottom: 20px;
+      max-width: 100%;
+      height: auto;
     }
+    
   }
 `}</style>
+
 
 
 
