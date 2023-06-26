@@ -81,7 +81,7 @@ export const NavBar = () => {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(to right, black, darkcyan);
+    background: linear-gradient(to right, black, silver);
     transition: width 0.3s ease-in-out;
   }
 
@@ -103,6 +103,17 @@ export const NavBar = () => {
     #ygg-logo {
       max-width: 100%;
       height: auto;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: none;
+      transition: width 0.3s ease-in-out;
     }
     
   }
