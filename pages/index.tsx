@@ -27,10 +27,7 @@ export default function Home() {
   </div>
 </div>
 
-        <div className={styles.footer}>
-       
-          <code>© 2023. All rights reserved.</code>
-        </div>
+      
 
         {/* <form className={styles.form}>
             <h2 className={inter.className}>Subscribe for updates</h2>

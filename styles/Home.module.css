@@ -5,7 +5,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
-  min-height: 100vh;
 }
 
 .description {
@@ -110,30 +109,36 @@
 }
 
 .card {
-  max-width: 90%;
+  max-width: 50%;
   align-items: center;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   display: flex;
   color: white;
   flex-direction: column;
-  justify-content: center;
+  margin-top: 10rem;
   margin-bottom: 3%;
-  min-height: 20vh;
   padding: 3%;
-  /* adjust the padding as needed */
+  /* Adjust the padding here, you might not need padding-bottom anymore */
   border: 0.5px solid rgba(207, 250, 255, 0.265);
   text-align: justify;
   overflow: auto;
   word-wrap: break-word;
-  height: auto;
-  /* justifies the text, giving it a more even appearance */
+  justify-content: space-between;
+  font-size: small;
 }
+
 
 .cardContainer {
 
   display: flex;
   justify-content: center;
+  min-width: 100%;
+}
+
+.blogCard {
+  composes: card;
+  min-width: 30%;
 }
 
 .card h1 {
@@ -164,7 +169,8 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  position: relative;
+  max-height: 10px;
+
 }
 
 .center::before {
@@ -192,7 +198,7 @@
 }
 
 .logo {
-  animation: glow 12s ease-in-out infinite;
+  animation: glow 6s ease-in-out infinite;
 }
 
 @keyframes glow {
@@ -247,6 +253,7 @@
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
+  margin-top: 10rem;
 }
 
 #comingSoon {
@@ -359,10 +366,13 @@
 }
 
 .responsiveImage {
-  width: 20%;
-  max-width: 270px;
-  /* This would be the max width of your image */
+  width: 10%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 
 
 @media (max-width: 600px) {
@@ -420,9 +430,11 @@
   }
 
   .card {
-    width: 100%;
+    max-width: 50rem;
+
+
     /* adjust the width of the card for smaller screens */
-    height: 25rem;
+    height: auto;
   }
 
   #comingSoon {
@@ -497,7 +509,7 @@
 
   .card {
     width: 100%;
-    margin-bottom: 12rem;
+    margin-top: 5rem;
   }
 }
 
@@ -508,7 +520,8 @@
   }
 
   .responsiveImage {
-    max-width: 50%;
+    width: 30%;
+
 
   }
 
@@ -518,8 +531,9 @@
   }
 
   .card {
+    margin-top: 5rem;
     width: 100%;
-    margin-bottom: 12rem;
+
   }
 }
 
@@ -541,8 +555,9 @@
   }
 
   .card {
+    margin-top: 5rem;
     width: 100%;
-    margin-bottom: 12rem;
+
   }
 }
 

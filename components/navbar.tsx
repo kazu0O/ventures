@@ -22,6 +22,11 @@ export const NavBar = () => {
         </Link>
       </div>
       <div id='nav-links-container'>
+      <Link href='/portfolio' rel='noopener noreferrer'>
+          <h2 id='portfolio-about' className={inter.className}>
+            Portfolio
+          </h2>
+        </Link>
       
         <Link href='/about' rel='noopener noreferrer'>
           <h2 id='nav-about' className={inter.className}>
@@ -29,17 +34,13 @@ export const NavBar = () => {
           </h2>
         </Link>
 
-        <Link href='/portfolio' rel='noopener noreferrer'>
-          <h2 id='portfolio-about' className={inter.className}>
-            Portfolio
-          </h2>
-        </Link>
+        
 
-        <Link href='/contact' rel='noopener noreferrer'>
+        {/* <Link href='/contact' rel='noopener noreferrer'>
           <h2 id='contact-about' className={inter.className}>
             Contact
           </h2>
-        </Link>
+        </Link> */}
 
         <Link
           href='/blog'

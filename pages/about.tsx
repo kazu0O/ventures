@@ -16,12 +16,12 @@ export default function About() {
       <main className={styles.main}>
         <NavBar />
         
-          <div className={styles.center}>
-            <div className={styles.cardContainer}>
+         
+           
             <div className={`${styles.card}`}>
             <h1 > Yield Guild Games (YGG)</h1>
             <br />
-            <h3 style={{textAlign: 'center'}}>
+            <h3 >
               A top web3 gaming guild, is entering the venture capital space, raising $75 million for its first fund.
             </h3>
 
@@ -33,10 +33,10 @@ export default function About() {
               We are just about to begin raising from LPs for the fund, Li said. She is now also a director of YGG Ventures, according to the pitch deck. Li will be part of the fund&apos;s investment committee as well, along with Gabby Dizon, another co-founder of YGG, and Jeff Holmberg, head of asset acquisition at YGG, who will transition to partner at YGG Ventures. Holmberg will oversee the fund&apos;s strategy and day-to-day operations in his new role and manage a team of gaming analysts, according to the deck.
             </p>
           </div>
-            </div>
+            
           
 
-          </div>
+          
           {/* <form className={styles.form}>
             <h2 className={inter.className}>Subscribe for updates</h2>
             <br />
@@ -46,9 +46,7 @@ export default function About() {
           </form> */}
         
 
-        <div className={styles.footer}>
-          <code>© 2023. All rights reserved.</code>
-        </div>
+        
       </main>
     </>
   );
