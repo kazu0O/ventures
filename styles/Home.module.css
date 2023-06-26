@@ -138,8 +138,10 @@
 
 .blogCard {
   composes: card;
+  text-align: center;
   min-width: 30%;
 }
+
 
 .card h1 {
   animation: glow 12s ease-in-out infinite;

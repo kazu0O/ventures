@@ -64,7 +64,7 @@ export default function Articles() {
                     <h1 > Yield Guild Games (YGG)</h1>
                     <section>
                         <div>
-                            <h3>Latest Articles</h3>
+                            <h2 className={styles.underline}>Latest Articles</h2>
                             <ul>
                                 {items.map((item, index) => (
                                     <div key={index}>
