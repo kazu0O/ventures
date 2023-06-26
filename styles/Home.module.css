@@ -143,7 +143,7 @@
 }
 
 .underline {
-  border-bottom: 0.5px;
+  border-bottom: 0.5;
 }
 
 .card h1 {
@@ -380,97 +380,65 @@
 
 
 
-/* Unchanged initial styles... */
-
-/* Mobile */
-@media (max-width: 700px) {
-  .content {
-    padding: 4rem;
-  }
-
-  .card {
-    padding: 1rem 2.5rem;
-  }
-
-  .card h2 {
-    margin-bottom: 0.5rem;
-  }
-
-  .center {
-    padding: 8rem 0 6rem;
-  }
-
-  .footer {
-    margin-bottom: 7.5rem;
-  }
-
-  .description {
-    font-size: 0.8rem;
-  }
-
-  .description a {
-    padding: 1rem;
-  }
-
-  .description p,
-  .description div {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-  }
-
-  .description p {
-    align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(to bottom,
-        rgba(var(--background-start-rgb), 1),
-        rgba(var(--callout-rgb), 0.5));
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
-  }
-
-  .description div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(to bottom,
-        transparent 0%,
-        rgb(var(--background-end-rgb)) 40%);
-    z-index: 1;
+@media (max-width: 600px) {
+  .responsiveImage {
+    max-width: 100%;
   }
 }
 
-.responsiveImage {
-  width: 10%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@media (min-width: 600px) and (max-width: 900px) {}
+
+/* continue with other media queries... */
+
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {}
+
+@media (prefers-color-scheme: dark) {
+  .vercelLogo {
+    filter: invert(1);
+  }
+
+  .logo,
+  .thirteen img {
+    /* filter: invert(.8); */
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
 }
 
 @media (max-width: 600px) {
+
+  /* CSS styles for screens smaller than 600px */
   .yggLogo {
     width: 100%;
+    /* adjust the width of the logo for smaller screens */
   }
+
 
   .responsiveImage {
     max-width: 100%;
   }
 
   .grid {
-    width: 100%;
+    width: 5% !important;
     font-size: 0.75rem;
+    margin-left: 14.5rem;
   }
 
   .card {
-    max-width: 100%;
+    max-width: 50rem;
+
+
+    /* adjust the width of the card for smaller screens */
     height: auto;
   }
 
@@ -479,58 +447,135 @@
   }
 }
 
-@media (min-width: 601px) and (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 900px) {
+
+  /* CSS styles for screens between 600px and 900px */
   .yggLogo {
     width: 100%;
+    /* adjust the width of the logo for tablets */
     height: 80px;
     margin-right: 1rem;
   }
 
   .responsiveImage {
     max-width: 50%;
+    /* adjust the value as needed */
   }
 
   .card {
     width: 90%;
+    /* adjust the width of the card for tablets */
   }
 }
 
 /* iPhone 10 */
 @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
-  .responsiveImage {
-    max-width: 100%;
-  }
+
+
+
 
   .grid {
-    width: 100%;
+    width: 5% !important;
     font-size: 0.75rem;
+    margin-left: 14.5rem;
   }
 }
 
 /* iPhone 11 */
 @media only screen and (min-device-width: 375px) and (max-device-width: 414px) {
   .responsiveImage {
-    max-width: 100%;
+    max-width: 50%;
+
   }
 
   .grid {
-    width: 100%;
+    width: 5% !important;
     font-size: 0.75rem;
+    margin-left: 14.5rem;
   }
 }
 
 /* iPhone 12 */
 @media only screen and (min-device-width: 414px) and (max-device-width: 896px) {
   .yggLogo {
-    width: 80%;
+    width: 100%;
+    height: 100px;
   }
 
   .responsiveImage {
-    max-width: 100%;
+    max-width: 50%;
+
   }
 
-  .grid {
-    width: 100%;
-    font-size: 0.75rem;
+
+  #comingSoon {
+    margin-bottom: 18rem;
   }
+
+  .card {
+    width: 100%;
+    margin-top: 5rem;
+  }
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 420px) {
+
+  .yggLogo {
+    width: 20px;
+  }
+
+  .responsiveImage {
+    width: 30%;
+
+
+  }
+
+
+  #comingSoon {
+    margin-bottom: 15rem;
+  }
+
+  .card {
+    margin-top: 5rem;
+    width: 100%;
+
+  }
+}
+
+@media only screen and (min-device-width: 200px) and (max-device-width: 350px) {
+  .yggLogo {
+    width: 80px;
+    height: 100px;
+  }
+
+  .responsiveImage {
+    max-width: 50%;
+
+  }
+
+
+  #comingSoon {
+    margin-bottom: 17rem;
+    font-size: small;
+  }
+
+  .card {
+    margin-top: 5rem;
+    width: 100%;
+
+  }
+}
+
+/* iPhone 13 */
+@media only screen and (min-device-width: 896px) {
+  .yggLogo {
+    width: 90px;
+    height: 113px;
+  }
+
+  .responsiveImage {
+    max-width: 50%;
+
+  }
+
 }
