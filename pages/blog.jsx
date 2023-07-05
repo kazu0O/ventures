@@ -5,18 +5,20 @@ import Image from 'next/image';
 import { Inter } from '@next/font/google';
 import styles from '../styles/Home.module.css';
 import { NavBar } from '../components/navbar';
+import { useRouter } from 'next/router';
 
 export default function Articles() {
     const [items, setItems] = useState([]);
     const [error, setError] = useState(null);
+    const router = useRouter();
+    const { id } = router.query;
 
     useEffect(() => {
         async function fetchData() {
             try {
                 const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@yieldguild');
                 const data = await res.json();
-                const items = data.items.slice(0, 3);
-                setItems(items);
+                setItems(data.items);
             } catch {
                 setError(true);
             }
@@ -26,28 +28,20 @@ export default function Articles() {
     }, []);
 
     if (error) {
+        // error handling code as before
+    }
+
+    if (id !== undefined) {
+        const item = items[id];
         return (
-            <section>
-                <div>
-                    <h3>Latest Articles</h3>
-                    <ul>
-                        <p>Failed to fetch data, please try again later.</p>
-                    </ul>
-                    <a
-                        href={"https://kevin-jonathan.medium.com/"}
-                        target={"_blank"}
-                        rel={"noopener noreferrer"}
-                    >
-                        Read on Medium
-                    </a>
-                </div>
-            </section>
+            <div>
+                <h1>{item.title}</h1>
+                <div dangerouslySetInnerHTML={{ __html: item.content }} />
+            </div>
         );
     }
 
     return (
-
-
         <>
             <Head>
                 <title>YGG Ventures</title>
@@ -57,20 +51,17 @@ export default function Articles() {
             </Head>
             <main className={styles.main}>
                 <NavBar />
-
-
-
                 <div className={`${styles.blogCard}`}>
-                    <h1 > Yield Guild Games (YGG)</h1>
+                    <h1> Yield Guild Games (YGG)</h1>
                     <section>
                         <div>
                             <h2 className={styles.underline}>Latest Articles</h2>
                             <ul>
                                 {items.map((item, index) => (
                                     <div key={index}>
-                                        <a href={item.link} target={"_blank"} rel={"noreferrer"}>
-                                            <h3>{item.title}</h3>
-                                        </a>
+                                        <Link href={`/articles/${index}`}>
+                                            <h3 className={`${styles.titleHover}`}>{item.title}</h3>
+                                        </Link>
                                     </div>
                                 ))}
                             </ul>
@@ -84,23 +75,7 @@ export default function Articles() {
                         </div>
                     </section>
                 </div>
-
-
-
-
-                {/* <form className={styles.form}>
-                <h2 className={inter.className}>Subscribe for updates</h2>
-                <br />
-                <input type="email" placeholder="Enter your email address" className={styles.input} />
-                <br />
-                <button type="submit" className={styles.button}>Subscribe</button>
-              </form> */}
-
-
-
             </main>
         </>
     );
 }
-
-
